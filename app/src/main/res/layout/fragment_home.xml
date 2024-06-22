@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".uis.HomeFragment">
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/cadeado"
+        android:layout_marginBottom="105dp"
+        />
+    <TextView
+        android:id="@+id/senhaGerada"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35dp"
+        android:text="Senha: "
+        android:textSize="25dp"
+        android:visibility="invisible"
+        android:layout_marginHorizontal="55dp"
+        />
+    <RadioGroup
+        android:id="@+id/radio_grup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        >
+        <RadioButton
+            android:id="@+id/forte"
+            android:text="Forte"
+            android:textSize="18dp"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/media"
+            android:text="Media"
+            android:textSize="18dp"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/fraca"
+            android:text="Fraca"
+            android:textSize="18dp"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RadioGroup>
+    <Button
+        android:id="@+id/btn_gerador_senha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="55dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:text="Gerar senha"
+        android:backgroundTint="@color/black"
+        />
+
+    <Button
+        android:id="@+id/btn_save_senha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="55dp"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        android:text="Salvar senha"
+        android:visibility="gone"
+        android:backgroundTint="@color/whiteR"
+        />
+    <TextView
+        android:id="@+id/go_to_key_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Senhas salvas"
+        android:textSize="19dp"
+        />
+</LinearLayout>

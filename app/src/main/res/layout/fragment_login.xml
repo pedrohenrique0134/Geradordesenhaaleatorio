@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".uis.LoginFragment">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/criptografia"
+            android:layout_marginBottom="35dp"
+            />
+
+        <EditText
+            android:id="@+id/loginEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:padding="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/white"
+            android:hint="email"
+            android:textColor="#5e605f"
+            />
+
+
+        <EditText
+            android:id="@+id/loginSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_marginHorizontal="25dp"
+            android:background="@color/white"
+            android:hint="senha"
+            />
+
+    <ProgressBar
+        android:id="@+id/loginProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:visibility="gone"
+        />
+
+        <Button
+            android:id="@+id/BtnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="15dp"
+            android:padding="10dp"
+            android:backgroundTint="@color/black"
+            android:text="Entrar"
+            />
+</LinearLayout>

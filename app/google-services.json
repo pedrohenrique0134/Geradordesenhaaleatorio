@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "301188492602",
+    "project_id": "gerador-6696e",
+    "storage_bucket": "gerador-6696e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:301188492602:android:4e7e8aec5f3f64fac77403",
+        "android_client_info": {
+          "package_name": "com.app.geradordesenhaaleatorio"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABhA0QyyLPm19Vq32F0J5U0_qAPKs-Xs8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

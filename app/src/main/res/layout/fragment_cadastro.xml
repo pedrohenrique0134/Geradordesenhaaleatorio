@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginHorizontal="20dp"
+    tools:context=".uis.CadastroFragment">
+
+
+    <EditText
+        android:id="@+id/nome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:padding="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/white"
+        android:hint="Nome"
+        android:textColor="#5e605f"
+        />
+
+    <EditText
+        android:id="@+id/cadastroEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:padding="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/white"
+        android:hint="email"
+        android:textColor="#5e605f"
+        />
+    
+
+    <EditText
+        android:id="@+id/cadastroSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginHorizontal="25dp"
+        android:background="@color/white"
+        android:hint="senha"
+        />
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:layout_marginHorizontal="25dp"
+        android:layout_height="wrap_content"
+        />
+
+    <Button
+        android:id="@+id/Btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="15dp"
+        android:padding="10dp"
+        android:text="inscreve-se"
+         />
+
+    <TextView
+        android:id="@+id/go_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        android:text="Já tem conta? Fazer Login"/>
+
+</LinearLayout>
