@@ -81,6 +81,7 @@ class SenhasSalvasFragment : Fragment(), ClickEdit, ClickDelete, CopyKey {
                     binding.recyclerView.visibility = View.GONE
                     binding.progressCircular.visibility = View.VISIBLE
                 }
+
                 is UiState.Success -> {
                     list.clear()
                     binding.progressCircular.visibility = View.GONE
