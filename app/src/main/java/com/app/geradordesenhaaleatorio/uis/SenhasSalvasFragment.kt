@@ -127,9 +127,10 @@ class SenhasSalvasFragment : Fragment(), ClickEdit, ClickDelete, CopyKey {
             }
         }
     }
-    private fun init(){
-        viewModelDatabase.getKey(FirebaseAuth.getInstance().currentUser?.uid!!)
 
+    private fun init(){
+
+        viewModelDatabase.getKey(FirebaseAuth.getInstance().currentUser?.uid!!)
         binding.btnBackHome.setOnClickListener {
             findNavController().navigate(
                 R.id.action_senhasSalvasFragment_to_homeFragment
@@ -152,8 +153,6 @@ class SenhasSalvasFragment : Fragment(), ClickEdit, ClickDelete, CopyKey {
 
         editTextTitulo.setText(myKeys.title)
         editTextKey.setText(myKeys.keys)
-
-
 
         btnSalvar.setOnClickListener {
             val hashMap = hashMapOf<String, Any>(
@@ -181,13 +180,14 @@ class SenhasSalvasFragment : Fragment(), ClickEdit, ClickDelete, CopyKey {
         btnDelete = dialogDelete.findViewById(R.id.excluir_key_dialog)
         btnCancelarDelete = dialogDelete.findViewById(R.id.no_excluir_key_dialog)
         progressDelete = dialogDelete.findViewById(R.id.progress_delete)
-        btnDelete.setOnClickListener {
-            viewModelDatabase.deleteKey(
-                FirebaseAuth.getInstance().currentUser?.uid!!,
-                myKeys
-            )
-        }.apply {
-            binding.recyclerView.visibility = View.GONE
+        val userId = FirebaseAuth.getInstance().currentUser?.uid
+        if (userId != null) {
+            btnDelete.setOnClickListener {
+                viewModelDatabase.deleteKey(userId,myKeys)
+                binding.recyclerView.visibility = View.GONE
+            }
+        }else{
+            Toast.makeText(requireContext(), "Nao ha registro", Toast.LENGTH_SHORT).show()
         }
         btnCancelarDelete.setOnClickListener {
             dialogDelete.dismiss()
@@ -200,5 +200,4 @@ class SenhasSalvasFragment : Fragment(), ClickEdit, ClickDelete, CopyKey {
         Toast.makeText(requireContext(), "senha copiada: $key", Toast.LENGTH_SHORT).show()}
 
     }
-
 }
